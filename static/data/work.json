@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Whopper Sacrifice",
+    "id": "whoppersacrifice",
+    "hero": {
+      "type": "iframe",
+      "src": "https://player.vimeo.com/video/57486250"
+    },
+    "content": [
+      "The idea was simple: Whopper Sacrifice let you prove that you love the Whopper more than you love your Facebook “friends”.",
+      "It’s all too easy to amass a large number of acquaintances through social media, and this app sought to reward those willing to let go. Once a user deleted 10 friends, she would receive a voucher for a free Whopper from Burger King. Unfortunately, Facebook felt the application didn’t fit with the “spirit” of Facebook, so they disabled much of the app’s critical features.",
+      "Whopper Sacrifice changed the landscape of Facebook’s app ecosystem. They eventually released the Facebook API (which has greatly expanded in scope), and they began to work more closely with companies and advertisers seeking to leverage the Facebook platform. There will never be another app using such guerrilla methods to access Facebook, but what we have instead has made developing on the platform so much easier."
+    ],
+    "links": [
+      {
+        "title": "@nytimes",
+        "url": "http://bits.blogs.nytimes.com/2009/01/15/whopper-sacrifice-de-friended-on-facebook/"
+      },
+      {
+        "title": "@creativity",
+        "url": "http://creativity-online.com/work/burger-king-whopper-sacrifice/14839"
+      },
+      {
+        "title": "@nytimes (also)",
+        "url": "http://www.nytimes.com/2009/01/29/fashion/29facebook.html?_r=0"
+      }
+    ]
+  },
+  {
+    "title": "Tropical Smoothie Cafe",
+    "id": "tropicalsmoothie",
+    "hero": {
+      "type": "img",
+      "src": "TBD"
+    },
+    "content": [
+      "TBD"
+    ],
+    "links": []
+  },
+  {
+    "title": "Decode Jay-Z",
+    "id": "decoded",
+    "hero": {
+      "type": "iframe",
+      "src": "https://player.vimeo.com/video/310800754"
+    },
+    "content": [
+      "When promoting Mr. Z’s forthcoming book, Droga5 pitched a very ambitious mapping application that would integrate augmented reality into street-level imagery, as well as provide clues to real-world locations. While complicate, I knew the ask to be technically feasible within Google’s Maps API. Because of Droga5’s prior relationship with Microsoft’s Bing search engine, a brand partnership was formed, which meant the project would need to work with Bing Maps on Microsoft’s Silverlight platform.",
+      "During the early conceptual phase of the project, I preformed critical research to determine feasibility. I also provided guidance in selecting a production partner with the knowledge and experience in Silverlight to get the job done."
+    ],
+    "links": [
+      {
+        "title": "@fastcompany",
+        "url": "http://www.fastcompany.com/1704745/inside-jay-zs-launch-decoded-droga5-bing"
+      }
+    ]
+  },
+  {
+    "title": "George Condo: Mental States",
+    "id": "georgecondo",
+    "hero": {
+      "type": "img",
+      "src": "tbd"
+    },
+    "content": [
+      "TBD"
+    ],
+    "links": [
+      {
+        "title": "@creativity",
+        "url": "https://adage.com/creativity/work/george-condo-mental-states/22733"
+      }
+    ]
+  },
+  {
+    "title": "Traveler 25th Anniversary",
+    "id": "traveler25",
+    "hero": {
+      "type": "iframe",
+      "src": "https://player.vimeo.com/video/97394744"
+    },
+    "content": [
+      "Condé Nast Traveler wanted to create an animated version of the infographic that appeared in their 25th anniversary issue. The animated version would need to live on their website, as well as the iPad edition of the magazine. They were looking for a single codebase that could work on any browser, going back to IE 8.",
+      "Using Modernizr, I created a version using HTML5 &amp; CSS3 for Webkit browsers and Firefox, with a graceful degrade to IE 8-9 that avoided the use of Flash for this animation-heavy project."
+    ],
+    "links": []
+  },
+  {
+    "title": "Nog Pong",
+    "id": "nogpong",
+    "hero": {
+      "type": "iframe",
+      "src": "https://player.vimeo.com/video/85875649"
+    },
+    "content": [
+      "Nog Pong’s two previous iterations were built in Flash and relied on RemoteObject. This year, they wanted to port the site to HTML. As part of a team, I helped layout HTML/CSS and work with Node’s Socket.io to facilitate communication between client and server. Players used game-like controls to send aiming and power data to the server, which in turn fired the Nogbot. User’s would also receive realtime updates on queued users and scores. A separate Flex application was built to visually determine made shots and send point values to the server."
+    ],
+    "links": []
+  }
+]
