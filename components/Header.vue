@@ -52,10 +52,6 @@ export default {
         {
           to: '/contact',
           name: 'Contact'
-        },
-        {
-          to: '/error',
-          name: 'Error'
         }
       ],
       showMenu: false,

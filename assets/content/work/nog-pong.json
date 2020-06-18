@@ -3,7 +3,7 @@
     "type": "iframe",
     "src": "https://player.vimeo.com/video/85875649"
   },
-  "float": 0,
+  "float": 1,
   "title": "Nog Pong",
   "body": "Nog Pong’s two previous iterations were built in Flash and relied on RemoteObject. This year, they wanted to port the site to HTML. As part of a team, I helped layout HTML/CSS and work with Node’s Socket.io to facilitate communication between client and server. Players used game-like controls to send aiming and power data to the server, which in turn fired the Nogbot. User’s would also receive realtime updates on queued users and scores. A separate Flex application was built to visually determine made shots and send point values to the server."
 }

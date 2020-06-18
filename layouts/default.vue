@@ -1,5 +1,5 @@
 <template lang="pug">
-.font-sans.min-h-screen.pb-8
+.main-body.font-sans.min-h-screen.pb-8
   site-header
   nuxt
 </template>
@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss">
 @import 'assets/css/settings.scss';
-body {
+.main-body {
   max-width: 100vw;
   overflow-x: hidden;
   background: $gray;
@@ -51,8 +51,5 @@ body {
 }
 a {
   transition: color .25s, border-width .25s
-}
-.gray-95 {
-  background: $gray-95;
 }
 </style>
