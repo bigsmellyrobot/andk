@@ -1,5 +1,23 @@
 {
   "float": 0,
   "title": "Whopper Sacrifice",
-  "body": "The idea was simple: Whopper Sacrifice let you prove that you love the Whopper more than you love your Facebook “friends”.\n\nIt’s all too easy to amass a large number of acquaintances through social media, and this app sought to reward those willing to let go. Once a user deleted 10 friends, she would receive a voucher for a free Whopper from Burger King. Unfortunately, Facebook felt the application didn’t fit with the “spirit” of Facebook, so they disabled much of the app’s critical features.\n\nWhopper Sacrifice changed the landscape of Facebook’s app ecosystem. They eventually released the Facebook API (which has greatly expanded in scope), and they began to work more closely with companies and advertisers seeking to leverage the Facebook platform. There will never be another app using such guerrilla methods to access Facebook, but what we have instead has made developing on the platform so much easier."
+  "body": "The idea was simple: Whopper Sacrifice let you prove that you love the Whopper more than you love your Facebook “friends”.\n\nIt’s all too easy to amass a large number of acquaintances through social media, and this app sought to reward those willing to let go. Once a user deleted 10 friends, she would receive a voucher for a free Whopper from Burger King. Unfortunately, Facebook felt the application didn’t fit with the “spirit” of Facebook, so they disabled much of the app’s critical features.\n\nWhopper Sacrifice changed the landscape of Facebook’s app ecosystem. They eventually released the Facebook API (which has greatly expanded in scope), and they began to work more closely with companies and advertisers seeking to leverage the Facebook platform. There will never be another app using such guerrilla methods to access Facebook, but what we have instead has made developing on the platform so much easier.",
+  "hero": {
+    "type": "iframe",
+    "src": "https://player.vimeo.com/video/57486250"
+  },
+  "links": [
+    {
+      "title": "nytimes",
+      "url": "http://bits.blogs.nytimes.com/2009/01/15/whopper-sacrifice-de-friended-on-facebook/"
+    },
+    {
+      "title": "creativity",
+      "url": "http://creativity-online.com/work/burger-king-whopper-sacrifice/14839"
+    },
+    {
+      "title": "nytimes (also)",
+      "url": "http://www.nytimes.com/2009/01/29/fashion/29facebook.html?_r=0"
+    }
+  ]
 }
