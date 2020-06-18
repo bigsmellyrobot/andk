@@ -1,0 +1,9 @@
+{
+  "hero": {
+    "type": "iframe",
+    "src": "https://player.vimeo.com/video/97394744"
+  },
+  "float": 1,
+  "title": "Traveler 25th Anniversary",
+  "body": "Condé Nast Traveler wanted to create an animated version of the infographic that appeared in their 25th anniversary issue. The animated version would need to live on their website, as well as the iPad edition of the magazine. They were looking for a single codebase that could work on any browser, going back to IE 8.\n\nUsing Modernizr, I created a version using HTML5 &amp; CSS3 for Webkit browsers and Firefox, with a graceful degrade to IE 8-9 that avoided the use of Flash for this animation-heavy project."
+}
