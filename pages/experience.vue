@@ -8,7 +8,7 @@
         h3.w-full.text-3xl.font-hairline {{ e.name }}
         .w-full.text-xl.font-normal.mb-1 {{ e.title }}
         .w-32.mr-2 {{ e.loc }}
-        div {{ e.year }}
+        div {{ e.date }}
 </template>
 
 <script>
@@ -23,40 +23,9 @@ export default {
       title: 'Andrew Kennedy//Experience'
     }
   },
-  data: function() {
-    return {
-      experience: [
-        {
-          name: 'Plein Air',
-          title: 'Founding Partner, Technology',
-          loc: 'Austin, TX',
-          year: 2017
-        },
-        {
-          name: 'Levenson Group',
-          title: 'Technology Director',
-          loc: 'Austin, TX',
-          year: 2015
-        },
-        {
-          name: 'Saatchi & Saatchi LA',
-          title: 'Sr. Technology Lead',
-          loc: 'Los Angeles, CA',
-          year: 2011
-        },
-        {
-          name: 'Droga5',
-          title: 'Technology Lead',
-          loc: 'New York, NY',
-          year: 2010
-        },
-        {
-          name: 'Crispin Porter + Bogusky',
-          title: 'Interactive Developer',
-          loc: 'Boulder, CO',
-          year: 2007
-        }
-      ]
+  computed: {
+    experience() {
+      return this.$store.state.experience
     }
   }
 }

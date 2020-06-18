@@ -1,0 +1,52 @@
+backend:
+  name: bitbucket
+  repo: bigsmellyrobot/andk
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'experience'
+    label: 'Experience'
+    format: 'json'
+    folder: 'assets/content/experience'
+    create: true
+    slug: '{{date}}-{{name}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Location', name: 'loc', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime', format: 'YYYY' }
+  - name: 'work'
+    label: 'Work'
+    format: 'json'
+    folder: 'assets/content/work'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - label: 'Hero'
+        name: 'hero'
+        widget: 'object'
+        collapsed: false
+        fields:
+          - label: 'Type'
+            name: 'type'
+            widget: 'select'
+            default: 'iframe'
+            options:
+              - { label: 'iFrame', value: 'iframe' }
+          - { label: 'Source', name: 'src', widge: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Links'
+        name: 'links'
+        widget: 'list'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string'}
+          - { label: 'URL', name: 'url', widget: 'string' }
+      - { label: 'Float', name: 'float', widget: 'number', default: 0 }

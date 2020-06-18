@@ -2,32 +2,34 @@
   main.pt-16.pb-8
     page-header.pl-2.pr-2(title='Work')
     section.pl-2.pr-2
-      work-page(:work='work')
+      ul.list-reset
+        li(
+          v-for="w in work"
+          :key="w.slug"
+          class='block py-1'
+          )
+          nuxt-link(
+            :to='"/work/" + w.slug'
+            class='text-white no-underline text-3xl font-hairline border-b-0 hover:border-b-2'
+            ) {{w.title}}
 </template>
 
 <script>
 import PageHeader from '~/components/PageHeader.vue'
-import WorkPage from '~/components/WorkPage.vue'
-import WorkNav from '~/components/WorkNav.vue'
-import work from '~/static/data/work.json'
 
 export default {
   components: {
-    PageHeader,
-    WorkPage,
-    WorkNav
+    PageHeader
   },
   head: function() {
     return {
-      title: 'Andrew Kennedy//Work//Whopper Sacrifice'
+      title: 'Andrew Kennedy//Work'
     }
   },
-  data: function() {
-    return {
-      all: work,
-      work: work[0],
-      prev: work[work.length - 1],
-      next: work[1]
+  computed: {
+    work() {
+      console.log(this.$store.state.work)
+      return this.$store.state.work
     }
   }
 }

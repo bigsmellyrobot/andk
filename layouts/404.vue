@@ -24,5 +24,5 @@ export default {
 body
   max-width: 100vw
   overflow-x: hidden
-  background: #000 url('~/images/404.jpg') no-repeat left bottom
+  background: #000 url('/images/404.jpg') no-repeat left bottom
 </style>

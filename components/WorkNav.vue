@@ -3,19 +3,24 @@ nav.work-nav.fixed.pin-b.w-full
   .work-menu.flex.justify-center.absolute.pin-b(
     v-bind:class='{ showme: showMenu }'
     )
-    ul.list-reset.bg-black-95.p-4
+    ul.list-reset.bg-black-95.p-4.text-center
       li.block.py-2(
         v-for='w in work'
         )
         nuxt-link(
           class='text-white no-underline font-hairline border-b-0 hover:border-b-2'
-          :to='"/work/" + w.id'
+          :to='"/work/" + w.slug'
           ) {{ w.title }}
+      li.block.py-2
+        nuxt-link(
+          class='text-white no-underline border-b-0 hover:border-b-2'
+          to='/work'
+        ) Work Home
   .flex.bg-black-95.relative
     div(
       class='w-2/5 px-2 py-4'
       )
-      nuxt-link.text-white.no-underline.font-hairline(:to='"/work/" + prev.id')
+      nuxt-link.text-white.no-underline.font-hairline(:to='"/work/" + prev.slug')
         span.arrow-left
         span(class='hidden md:inline') {{ prev.title }}
     div(
@@ -31,7 +36,7 @@ nav.work-nav.fixed.pin-b.w-full
     div(
       class='w-2/5 px-2 py-4 text-right'
       )
-      nuxt-link.text-white.no-underline.font-hairline(:to='"/work/" + next.id')
+      nuxt-link.text-white.no-underline.font-hairline(:to='"/work/" + next.slug')
         span(class='hidden md:inline') {{ next.title }}
         span.arrow-right
 </template>
@@ -39,17 +44,8 @@ nav.work-nav.fixed.pin-b.w-full
 <script>
 export default {
   props: {
-    prev: {
-      type: Object,
-      default: function() {
-        return {}
-      }
-    },
-    next: {
-      type: Object,
-      default: function() {
-        return {}
-      }
+    slug: {
+      type: String
     },
     work: {
       type: Array,
@@ -59,8 +55,16 @@ export default {
     }
   },
   data: function() {
+    let indx = 0
+    this.work.map((w, i) => {
+      if(w.slug == this.slug) {
+        indx = i
+      }
+    })
     return {
-      showMenu: false
+      showMenu: false,
+      prev: this.work[indx > 0 ? indx - 1 : this.work.length - 1],
+      next: this.work[indx < this.work.length - 1 ? indx + 1 : 0]
     }
   },
   watch: {
