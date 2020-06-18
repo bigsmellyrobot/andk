@@ -1,5 +1,5 @@
 backend:
-  name: bitbucket
+  name: github
   repo: bigsmellyrobot/andk
   branch: master
 

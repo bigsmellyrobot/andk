@@ -10,7 +10,7 @@ main.pt-16.pb-8
         )
         iframe.absolute.pin.w-full.h-full.bg-black(:src='hero.src')
     .text-justify.leading-normal.max-w-md.mb-4(v-html="body")
-    .max-w-md(v-if='links.length > 0')
+    .max-w-md(v-if='links && links.length > 0')
       h4.text-xl.mb-2 Read More
       ul.list-reset
         li.mb-2(

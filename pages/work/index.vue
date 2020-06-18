@@ -28,7 +28,6 @@ export default {
   },
   computed: {
     work() {
-      console.log(this.$store.state.work)
       return this.$store.state.work
     }
   }
