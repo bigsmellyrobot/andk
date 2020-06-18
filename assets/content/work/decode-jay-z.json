@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "type": "iframe",
+    "src": "https://player.vimeo.com/video/310800754"
+  },
+  "float": 1,
+  "title": "Decode Jay-Z",
+  "body": "When promoting Mr. Z’s forthcoming book, Droga5 pitched a very ambitious mapping application that would integrate augmented reality into street-level imagery, as well as provide clues to real-world locations. While complicate, I knew the ask to be technically feasible within Google’s Maps API. Because of Droga5’s prior relationship with Microsoft’s Bing search engine, a brand partnership was formed, which meant the project would need to work with Bing Maps on Microsoft’s Silverlight platform.\",\n\n\"During the early conceptual phase of the project, I preformed critical research to determine feasibility. I also provided guidance in selecting a production partner with the knowledge and experience in Silverlight to get the job done.",
+  "links": [
+    {
+      "title": "fastcompany",
+      "url": "http://www.fastcompany.com/1704745/inside-jay-zs-launch-decoded-droga5-bing"
+    }
+  ]
+}
