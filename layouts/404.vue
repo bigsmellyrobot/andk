@@ -21,7 +21,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'assets/css/settings.scss';
 .main-body {
   background: #000 url('/images/404.jpg') no-repeat left bottom;
+  &, a {
+    color: $white;
+  }
 }
 </style>

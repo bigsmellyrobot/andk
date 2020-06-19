@@ -16,11 +16,12 @@ export default {
 
 <style lang="scss">
 @import 'assets/css/settings.scss';
-.main-body {
+body {
   max-width: 100vw;
   overflow-x: hidden;
   background: $gray;
-
+}
+.main-body {
   &, a {
     color: $white;
   }
