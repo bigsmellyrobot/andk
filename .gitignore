@@ -79,3 +79,6 @@ dist
 
 # IDE
 .idea
+
+# ignore public admin files
+static/admin
