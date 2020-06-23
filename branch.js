@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 const branch = process.env.BRANCH == undefined ? 'master' : process.env.BRANCH
+const url = process.env.URL
 
 if(branch != undefined && branch != 'master') {
 
@@ -13,6 +14,6 @@ if(branch != undefined && branch != 'master') {
   }
 
   const config = fs.readFileSync(path.join(SRC, 'config.yml'), 'utf8')
-  fs.writeFileSync(path.join(DEST, 'config.yml'), config.replace(/\/%branch%\//, branch))
+  fs.writeFileSync(path.join(DEST, 'config.yml'), config.replace(/\/%BRANCH%\//, branch).replace(/\/%URL%\//, url))
   fs.createReadStream(path.join(SRC, 'index.html')).pipe(fs.createWriteStream(path.join(DEST, 'index.html')))
 }

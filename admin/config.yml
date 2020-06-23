@@ -1,10 +1,11 @@
 backend:
   name: github
   repo: bigsmellyrobot/andk
-  branch: /%branch%/
+  branch: /%BRANCH%/
 
 media_folder: static/img
 public_folder: /img
+display_url: /%URL%/
 
 collections:
   - name: 'experience'
