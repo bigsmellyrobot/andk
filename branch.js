@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 const branch = process.env.BRANCH == undefined ? 'master' : process.env.BRANCH
-const url = process.env.URL
+const url = process.env.DEPLOY_PRIME_URL
 
 if(branch != undefined && branch != 'master') {
 
