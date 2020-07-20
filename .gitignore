@@ -82,3 +82,5 @@ dist
 
 # ignore public admin files
 static/admin
+# Local Netlify folder
+.netlify

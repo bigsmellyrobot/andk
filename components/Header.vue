@@ -50,6 +50,10 @@ export default {
           name: 'Work'
         },
         {
+          to: '/cycling',
+          name: 'Cycling'
+        },
+        {
           to: '/contact',
           name: 'Contact'
         }
