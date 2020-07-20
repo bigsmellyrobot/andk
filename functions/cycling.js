@@ -5,7 +5,8 @@ const STRAVA_ID = 18841
 
 exports.handler = async function(event, context, callback) {
   let headers = {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': 'http://localhost:3000'
   }
 
   let code = 200
