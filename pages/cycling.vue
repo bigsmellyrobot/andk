@@ -3,7 +3,13 @@
     page-header(title='Cycling Stats')
     section
       .flex.items-end.font-hairline.mb-1
-        .w-6.text-3xl {{this.cycling.stats}}
+        .w-48.text-3xl all time
+        .text-3xl {{this.cycling.total}}
+      .flex.items-end.font-hairline.mb-1
+        .w-48.text-3xl biggest
+        .text-3xl {{this.cycling.biggest}}
+      p.font-hairline.mt-16 stats provided by 
+        a(href='http://developers.strava.com') Strava API
 </template>
 
 <script>
@@ -20,30 +26,21 @@ export default {
     }
   },
   mounted() {
-    //this.cycling.stats = 200
-    //console.log(this.cycling.stats)
     axios.get('http://localhost:8888/.netlify/functions/cycling')
     .then(res => {
-      console.log(res)
+      console.log(res.data)
+      this.cycling.total = `${(res.data.all_ride_totals.distance / 1609.344).toFixed(2)}mi`
+      this.cycling.biggest = `${(res.data.biggest_ride_distance / 1609.344).toFixed(2)}mi`
     })
   },
   data: function() {
     return {
       cycling: {
-        stats: 100
+        total: 'loading…',
+        biggest: 'loading…'
       }
     }
   }
-  // data: function() {
-  //   return {
-  //     cycling: function() {
-  //       axios.get('https://localhost:8888/.netlify/functions/cycling')
-  //       .then(res => {
-  //         console.log(res.data)
-  //       })
-  //     }
-  //   }
-  // }
 }
 </script>
 
