@@ -9,28 +9,14 @@ exports.handler = async function(event, context, callback) {
     headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
   }
 
-
-  let code = 200
-
   let token = await getToken()
 
-  let response = await axios({
-    'method': 'get',
-    'url': `${process.env.STRAVA_URL}/athletes/${process.env.STRAVA_ID}/stats`,
-    'headers': {
-      'Authorization': `Bearer ${token.access_token}`
-    }
-  }).then(res => {
-    return res.data
-  }).catch(err => {
-    code = err.response.status
-    return err.response.data
-  })
+  let response = await getData(token)
 
   callback(null, {
-    'statusCode': code,
+    'statusCode': response.code,
     'headers': headers,
-    'body': JSON.stringify(response)
+    'body': JSON.stringify(response.data)
   })
 }
 
@@ -45,10 +31,28 @@ async function getToken() {
       refresh_token: process.env.STRAVA_REFRESH_TOKEN
     }
   }).then(res => {
-    console.log(res.data)
     return res.data
   }).catch(err => {
-    console.log(err)
     return err
+  })
+}
+
+async function getData(token) {
+  return await axios({
+    'method': 'get',
+    'url': `${process.env.STRAVA_URL}/athletes/${process.env.STRAVA_ID}/stats`,
+    'headers': {
+      'Authorization': `Bearer ${token.access_token}`
+    }
+  }).then(res => {
+    return {
+      code: 200,
+      data: res.data
+    }
+  }).catch(err => {
+    return {
+      code: err.response.status,
+      data: err.response.data
+    }
   })
 }
