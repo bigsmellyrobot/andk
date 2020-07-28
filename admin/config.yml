@@ -2,8 +2,8 @@ backend:
   name: github
   repo: bigsmellyrobot/andk
   branch: /%BRANCH%/
-  publish_mode: editorial_workflow
 
+publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
 display_url: /%URL%/
