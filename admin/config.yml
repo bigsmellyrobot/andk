@@ -27,6 +27,7 @@ collections:
     folder: 'assets/content/work'
     create: true
     slug: '{{slug}}'
+    preview_path: 'work/{{slug}}'
     editor:
       preview: true
     fields:
