@@ -1,7 +1,8 @@
 <template lang="pug">
   main.p-2.pt-16
-    page-header(title='Cycling Stats')
-    section
+    page-header(title='More About Me')
+    section.mb-20
+      h2 Cycling Stats
       .flex.items-end.font-hairline.mb-1
         .w-48.text-3xl all time
         .text-3xl {{this.cycling.total}}
@@ -13,12 +14,16 @@
         .text-3xl {{this.cycling.aroundEarth}}
       svg.earth(width='110' height='110')
         path(d='M0,25 a1,1 0 0,0 100,0')
-      p.font-hairline.mt-16 stats provided by 
+      p.font-hairline.mt-8 stats provided by 
         a(href='http://developers.strava.com') Strava API
+    section.mb-4
+      h2 Vinyl Discography
+      p.font-hairline.mt-8 info provided by 
+        a(href='https://www.discogs.com/developers/') Discogs API
 </template>
 
 <script>
-import axios from 'axios'
+import api from '../utils/api'
 import PageHeader from '~/components/PageHeader.vue'
 
 export default {
@@ -27,11 +32,11 @@ export default {
   },
   head() {
     return {
-      title: 'Andrew Kennedy//Cycling'
+      title: 'Andrew Kennedy//More About Me'
     }
   },
   mounted() {
-    axios.get('http://localhost:8888/.netlify/functions/cycling')
+    api.getStravaInfo()
     .then(res => {
       console.log(res.data)
       this.cycling.rawTotal = res.data.all_ride_totals.distance

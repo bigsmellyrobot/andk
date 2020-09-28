@@ -39,7 +39,7 @@ export default {
       links: [
         {
           to: '/',
-          name: 'About'
+          name: 'About Me'
         },
         {
           to: '/experience',
@@ -50,8 +50,8 @@ export default {
           name: 'Work'
         },
         {
-          to: '/cycling',
-          name: 'Cycling'
+          to: '/more',
+          name: 'More Stuff'
         },
         {
           to: '/contact',

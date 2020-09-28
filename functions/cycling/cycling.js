@@ -39,10 +39,10 @@ async function getToken() {
 
 async function getData(token) {
   return await axios({
-    'method': 'get',
-    'url': `${process.env.STRAVA_URL}/athletes/${process.env.STRAVA_ID}/stats`,
-    'headers': {
-      'Authorization': `Bearer ${token.access_token}`
+    method: 'get',
+    url: `${process.env.STRAVA_URL}/athletes/${process.env.STRAVA_ID}/stats`,
+    headers: {
+      Authorization: `Bearer ${token.access_token}`
     }
   }).then(res => {
     return {
