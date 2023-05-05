@@ -9,13 +9,6 @@
             class='text-white no-underline border-b hover:border-b-4'
             href='mailto:andk@me.com'
             ) andk@me.com
-      .flex.items-end.font-hairline
-        .w-6.text-3xl p
-        .text-3xl
-          a(
-            class='text-white no-underline border-b hover:border-b-4'
-            href='tel:5125931147'
-            ) 512.593.1147
 </template>
 
 <script>
